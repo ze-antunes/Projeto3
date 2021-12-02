@@ -1,0 +1,11 @@
+* {
+    @import url('http://fonts.cdnfonts.com/css/georgia');
+    font-family: 'Georgia', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+@import "header";
+@import "map";

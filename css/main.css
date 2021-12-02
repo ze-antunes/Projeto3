@@ -1,0 +1,68 @@
+* {
+  @import url("http://fonts.cdnfonts.com/css/georgia");
+  font-family: "Georgia", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+}
+.header div.scrollmenu {
+  background-color: #363636;
+  overflow: auto;
+  white-space: nowrap;
+}
+.header div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+.header div.scrollmenu a:hover {
+  background-color: #777;
+}
+.header .navbar {
+  padding: 15px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  text-decoration: none;
+  color: #fff;
+}
+.header .nav-item {
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 25px;
+}
+.header .nav-link {
+  display: inline-block;
+}
+.header a {
+  text-decoration: none;
+  color: #fff;
+}
+@media (max-width: 715px) {
+  .header .nav-item {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header .nav-link {
+    margin: 5px 0;
+  }
+}
+
+.map {
+  background-image: url("imagens/mapa.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}/*# sourceMappingURL=main.css.map */
