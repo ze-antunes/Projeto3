@@ -1,15 +1,24 @@
 * {
   @import url("http://fonts.cdnfonts.com/css/georgia");
   font-family: "Georgia", sans-serif;
+  color: white;
 }
 
 body {
   margin: 0;
+  background-color: black;
+}
+
+.space {
+  display: block;
+  background-color: black;
+  height: 90px;
 }
 
 .header {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 .header div.scrollmenu {
   background-color: #363636;
@@ -61,8 +70,18 @@ body {
   }
 }
 
-.map {
-  background-image: url("imagens/mapa.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+.inicio {
+  background-color: #5d5d5d;
+  color: white;
+}
+.inicio .NockasZe {
+  width: 100%;
+  height: auto;
+}
+
+.stories {
+  width: 100vw;
+}
+.stories img {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

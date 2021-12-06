@@ -1,5 +1,8 @@
 .header {
-    position: sticky;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
     div.scrollmenu {
         background-color: rgb(54, 54, 54);
         overflow: auto;
