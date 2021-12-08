@@ -1,0 +1,46 @@
+/* PARALLAX */
+.body {
+height: 5000px;
+}
+
+.keyart, .keyart_layer {
+	height: 1000px;
+}
+
+#parallax {
+	display: block;
+}
+
+.keyart {
+	position: relative;
+	z-index: 10;
+}
+
+.keyart_layer {
+	background-position: bottom center;
+	background-size: auto 1038px;
+	width: 70%;
+	position: absolute;
+}
+
+/* .keyart_layer.parallax {
+	position: fixed;
+} */
+	#barbearia {
+		background-image: url('imagens/barbearia.png');
+	}
+	#cadeeiro {
+		background-image: url('imagens/candeeiro.png');
+	}
+	#cadeiras {
+		background-image: url('imagens/cadeiras.png');
+	}
+	#barbeiro {
+		background-image: url('imagens/barbeiro.png');
+	}
+	#vitima {
+		background-image: url('imagens/vitima.png');
+	}
+	#chao {
+		background-image: url('imagens/ground.png');
+	}
