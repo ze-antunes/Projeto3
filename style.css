@@ -1,6 +1,8 @@
 /* PARALLAX */
 .body {
-height: 5000px;
+	margin: 0;
+	top: 0;
+	left: 0;
 }
 
 .keyart, .keyart_layer {
@@ -9,6 +11,9 @@ height: 5000px;
 
 #parallax {
 	display: block;
+	margin: 0;
+	top: 0;
+	left: 0;
 }
 
 .keyart {
