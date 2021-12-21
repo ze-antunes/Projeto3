@@ -14,8 +14,6 @@ const flightPath = {
 }
 
 const tween = new TimelineLite();
-const tween2 = new TimelineLite();
-const tween3 = new TimelineLite();
 
 /* ---------------------- */
 
