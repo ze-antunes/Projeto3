@@ -24,3 +24,31 @@ header, footer {
     top: 50%;
     left: 0%;
 }
+
+.animation2 {
+    height: 100vh;
+    background-color: rgb(56, 56, 56);
+    position: relative;
+    overflow: hidden;
+}
+
+.cabeca2 {
+    position: absolute;
+    height: 100px;
+    top: 50%;
+    left: 0%;
+}
+
+.animation3 {
+    height: 100vh;
+    background-color: rgb(172, 172, 172);
+    position: relative;
+    overflow: hidden;
+}
+
+.cabeca3 {
+    position: absolute;
+    height: 100px;
+    top: 50%;
+    left: 0%;
+}
