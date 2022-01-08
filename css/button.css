@@ -1,0 +1,109 @@
+.button {
+  --background: #2d2e30;
+  --text: #fff;
+  --duration: .5s;
+  --move-hover: -4px;
+  padding: 16px 32px;
+  font-weight: 500;
+  font-family: "Signika Negative", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  border-radius: 24px;
+  display: block;
+  outline: none;
+  border: none;
+  letter-spacing: .5px;
+  background: var(--background);
+  color: var(--text);
+  -webkit-transform: translateY(var(--y));
+          transform: translateY(var(--y));
+  -webkit-transition: -webkit-transform var(--duration) ease, -webkit-box-shadow var(--duration) ease;
+  transition: -webkit-transform var(--duration) ease, -webkit-box-shadow var(--duration) ease;
+  transition: transform var(--duration) ease, box-shadow var(--duration) ease;
+  transition: transform var(--duration) ease, box-shadow var(--duration) ease, -webkit-transform var(--duration) ease, -webkit-box-shadow var(--duration) ease;
+  margin-left: 44%;
+}
+
+.button div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.button div span {
+  display: block;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  font-style: normal;
+}
+
+.button div span:nth-child(1) {
+  --d: 0.05s;
+}
+
+.button div span:nth-child(2) {
+  --d: 0.1s;
+}
+
+.button div span:nth-child(3) {
+  --d: 0.15s;
+}
+
+.button div span:nth-child(4) {
+  --d: 0.2s;
+}
+
+.button div span:nth-child(5) {
+  --d: 0.25s;
+}
+
+.button div span:nth-child(6) {
+  --d: 0.3s;
+}
+
+.button div span:nth-child(7) {
+  --d: 0.35s;
+}
+
+.button div span:nth-child(8) {
+  --d: 0.4s;
+}
+
+.button div span:nth-child(9) {
+  --d: 0.45s;
+}
+
+.button div span:nth-child(10) {
+  --d: 0.5s;
+}
+
+.button div span:nth-child(11) {
+  --d: 0.55s;
+}
+
+.button:hover {
+  --y: var(--move-hover);
+  --move: -4px;
+}
+
+.button:hover span {
+  -webkit-animation: move var(--duration) linear var(--d);
+          animation: move var(--duration) linear var(--d);
+}
+
+@-webkit-keyframes move {
+  40% {
+    -webkit-transform: translateY(var(--move));
+            transform: translateY(var(--move));
+    text-shadow: var(--shadow-active);
+  }
+}
+
+@keyframes move {
+  40% {
+    -webkit-transform: translateY(var(--move));
+            transform: translateY(var(--move));
+    text-shadow: var(--shadow-active);
+  }
+}
+/*# sourceMappingURL=button.css.map */

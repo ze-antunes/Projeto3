@@ -1,0 +1,145 @@
+/* tipografia */
+@import url("https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap");
+h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  position: relative;
+  letter-spacing: 0.04em;
+}
+body {
+    background-color:#111010;
+    color:rgb(243, 235, 235);
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 300;
+}
+
+/* text animation */
+.section {
+    height: 700px;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .revealUp {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+#imageText1{
+    position: absolute;
+    top: 1800px;
+    left: 45%;
+}
+#borbulha{
+    position: absolute;
+    left: 47%;
+}
+#navalha{
+    position: absolute;
+    left: 20%;
+}
+
+/* texto "Um bom barbeiro!" */
+.hide {
+    opacity: 0;
+    transition: opacity 1s linear;
+    -webkit-transition: opacity 1s linear;
+    -moz-transition: opacity 1s linear;
+    -o-transition: opacity 1s linear;
+  }
+  .show {
+    opacity: 1;
+    transition: opacity 1s linear;
+    -webkit-transition: opacity 1s linear;
+    -moz-transition: opacity 1s linear;
+    -o-transition: opacity 1s linear;
+  }
+
+
+/* icon de scroll */
+.icon-scroll,
+.icon-scroll:before{
+  position: absolute;
+  left: 50%;
+}
+
+.icon-scroll{
+  width: 40px;
+  height: 70px;
+  margin-left: -20px;
+  top: 475px;
+  margin-top: -35px;
+  box-shadow: inset 0 0 0 1px #fff;
+  border-radius: 25px;
+}
+
+.icon-scroll:before{
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin-left: -4px;
+  top: 8px;
+  border-radius: 4px;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+}
+
+@keyframes scroll{
+0%{
+    opacity: 1;
+}
+100%{
+    opacity: 0;
+    transform: translateY(46px);
+}
+}
+
+/* parallax */
+.keyart, .keyart_layer {
+	height: 1400px;
+}
+#parallax {
+	display: block;
+}
+.keyart {
+	position: relative;
+	z-index: 10;
+}
+.keyart_layer {
+	background-position: bottom center;
+	background-size: cover;
+	width: 100%;
+	position: absolute;
+}
+	#barbearia {
+		background-image: url("../imagens/parallax/barbearia.png");
+	}
+	#cadeeiro {
+		background-image: url("../imagens/parallax/candeeiro.png");
+	}
+	#cadeiras {
+		background-image: url("../imagens/parallax/cadeiras.png");
+	}
+	#barbeiro {
+		background-image: url("../imagens/parallax/barbeiro.png");
+	}
+	#vitima {
+		background-image: url("../imagens/parallax/vitima.png");
+	}
+	#chao {
+		background-image: url("../imagens/parallax/ground.png");
+	}

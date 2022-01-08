@@ -5,19 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/button.css">
+    <script src="js/parallax effect.js"></script>
     <title>Crimes Exemplares</title>
 </head>
 <body>
     <div class="space"></div>
 
+    <div class="stories">
+        <div class="section">
+            <h1>Scroll down</h1>
+        </div>
+        <div class='icon-scroll'></div>
+            <div class="section bg1">
+                <h1 class="revealUp">Sou barbeiro...</h1>
+            </div>
+        <img id="barbeiro" src="imagens/barbeiro1.png" height="1000px">
+        <div id="imageText1" class="hide">
+            <h1>Um bom barbeiro!</h1>
+            <h1>Um bom barbeiro!</h1>
+            <h1>Um bom barbeiro!</h1>
+            <h1>Um bom barbeiro!</h1>
+            <h1>Um bom barbeiro!</h1>
+            <h1>Um bom barbeiro!</h1>
+            <h1>Um bom barbeiro!</h1>
+            <h1>...</h1>
+        </div>
+        <script>
+            var image = document.getElementById("barbeiro");
+            image.addEventListener('mouseover', function(){
+            image.src = "imagens/barbeiro.gif"
+            document.getElementById("imageText1").className='show';
+            })
+            image.addEventListener('mouseout', function(){
+                image.src = "imagens/barbeiro1.png"
+                document.getElementById("imageText1").className='hide';
+            })
+        </script>
+        <div class="section bg1">
+            <h1 class="revealUp">Cada qual tem as suas manias,<br>
+                 eu não gosto de borbulhas.</h1>
+        </div>
+        <img id="borbulha" src="imagens/pimple1.png" height="100px">
+        <script>
+            var image2 = document.getElementById("borbulha");
+            image2.addEventListener('mouseover', function(){
+            image2.src = "imagens/pimple.gif"
+            })
+            image2.addEventListener('mouseout', function(){
+                image2.src = "imagens/pimple1.png"
+            })
+        </script>
+         <div class="section bg1">
+            <h1 class="revealUp">Comecei a barbeá-lo calmamente… nunca cortei ninguém.</h1>
+        </div>
+        <div class="section bg1">
+            <h1 class="revealUp">Nas suas borbulhas não havia nada de especial.</h1>
+        </div>
+        <img id="navalha" src="imagens/navalha1.png">
+        <script>
+            var image3 = document.getElementById("navalha");
+            image3.addEventListener('mouseover', function(){
+            image3.src = "imagens/navalha.gif"
+            })
+            image3.addEventListener('mouseout', function(){
+                image3.src = "imagens/navalha1.png"
+            })
+        </script>
+        <div class="section bg1" style="top: 500px;">
+            <h1 class="revealUp">A primeira, contornei-a bem, a segunda começou a sangrar.</h1>
+        </div>
+        <div class="section bg1">
+            <h1 class="revealUp">Sem poder deixar de o fazer.</h1>
+        </div>
+        <div class="section bg1">
+            <h1 class="revealUp">Cortei-lhe a cabeça.</h1>
+        </div>
+        <section class="animation">
+            <img class="head" src="imagens/head.png" alt="cabeça" height="150px">
+        </section>
+        <a href="parallax1.html" style="text-decoration: none;"><button class="button">Parallax</button></a>
+    </div>
+
     <div class="header">
         <nav class="navbar">
             <a class="brand" href="index.html">Crimes Exemplares</a>
             <a class="home" href="map.html">Mapa</a>
-            <button class="dots" alt="opções" onclick="openOps()">&hellip;</button>
-            <audio controls loop>
-                <source src="/som/Snarky Puppy - Shofukan (We Like It Here).mp3" type="audio/mpeg">
-            </audio>
         </nav>
 
         <div class="scrollmenu">
@@ -46,28 +119,6 @@
         </div>
     </div>
 
-    <div class="stories">
-
-        <header>
-            <h1>Scroll Animation</h1>
-        </header>
-
-        <section class="barbeiro" id="barbeiro">
-            <p>Sou barbeiro. É uma coisa que pode acontecer a qualquer pessoa. Quero dizer que até esse dia fui um bom barbeiro.</p>
-            <img src="/imagens/barbeiro.png" class="imgBarbeiro" alt="barbeiro">
-            <p> Eu não gosto de borbulhas...</p>
-            <p>Afiei a navalha no braço da cadeira e suavizei-a na palma da mão.</p>
-            <img src="/imagens/navalha.png" alt="navalha">
-            <p>Nunca cortei ninguém e ainda por cima esse tipo não tinha uma barba muito espessa. Mas tinha borbulhas.</p>
-            <p> A primeira, contornei-a bem, sem grande dificuldade, mas a segunda começou a sangrar.</p>
-            <p> Então, não sei o que me deu, ...cortei-lhe a cabeça.</p>
-        </section>
-
-        <footer>
-            <h1>Woooo</h1>
-        </footer>
-    </div>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js" integrity="sha512-hFyYiBIWCYSyo98oFGWjG5V8HEV4g5O2pxu0mzU8qIMC7lrrwtcKWoRDZcpRL0ywIIM2d/XsBJ9iXNLFf6kIgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js" integrity="sha512-7nSmgdAZ7oPdT5aa2a4YauI8Y1xgaj6zZtQo9+EIEhpcNEiRHPAtyTKYckBQ0lmg1xQKrdWweHBcN/D0tdnvCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -76,5 +127,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js" integrity="sha512-ocsFo48WU8Xq6Y1Lwi7psXRAujG9E4TKNR4q1DbrKzaaxOMTEoao/a+mDoB+cYzY4lwbyxvqjkp/ZA1/MNlfsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/BezierPlugin.min.js" integrity="sha512-plyexAULVlTExvDn2yUZFJV9F8q+53MC/GpU9dEuNGXmrrI3J8Rcffjvxg3OOBALBvF+UILPLIBEoCeF2maqTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/JS/storiesAnimation.js"></script>
+    <script src="/JS/index.js"></script>
+    <script src="/JS/button.js"></script>
 </body>
 </html>

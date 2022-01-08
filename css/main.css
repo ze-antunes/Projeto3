@@ -1,8 +1,189 @@
 @charset "UTF-8";
 /* CORES */
+@import url("https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap");
+@import url("http://fonts.cdnfonts.com/css/georgia");
+h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  letter-spacing: 0.04em;
+}
+
+body {
+  background-color: #111010;
+  color: #f3ebeb;
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 300;
+}
+
+/* text animation */
+.section {
+  height: 700px;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.revealUp {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#imageText1 {
+  position: absolute;
+  top: 1800px;
+  left: 45%;
+}
+
+#borbulha {
+  position: absolute;
+  left: 47%;
+}
+
+#navalha {
+  position: absolute;
+  left: 20%;
+}
+
+/* texto "Um bom barbeiro!" */
+.hide {
+  opacity: 0;
+  transition: opacity 1s linear;
+  -webkit-transition: opacity 1s linear;
+  -moz-transition: opacity 1s linear;
+  -o-transition: opacity 1s linear;
+}
+
+.show {
+  opacity: 1;
+  transition: opacity 1s linear;
+  -webkit-transition: opacity 1s linear;
+  -moz-transition: opacity 1s linear;
+  -o-transition: opacity 1s linear;
+}
+
+/* icon de scroll */
+.icon-scroll,
+.icon-scroll:before {
+  position: absolute;
+  left: 50%;
+}
+
+.icon-scroll {
+  width: 40px;
+  height: 70px;
+  margin-left: -20px;
+  top: 475px;
+  margin-top: -35px;
+  -webkit-box-shadow: inset 0 0 0 1px #fff;
+          box-shadow: inset 0 0 0 1px #fff;
+  border-radius: 25px;
+}
+
+.icon-scroll:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin-left: -4px;
+  top: 8px;
+  border-radius: 4px;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+          animation-name: scroll;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(46px);
+            transform: translateY(46px);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(46px);
+            transform: translateY(46px);
+  }
+}
+
+/* parallax */
+.keyart, .keyart_layer {
+  height: 1400px;
+}
+
+#parallax {
+  display: block;
+}
+
+.keyart {
+  position: relative;
+  z-index: 10;
+}
+
+.keyart_layer {
+  background-position: bottom center;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+}
+
+#barbearia {
+  background-image: url("../imagens/parallax/barbearia.png");
+}
+
+#cadeeiro {
+  background-image: url("../imagens/parallax/candeeiro.png");
+}
+
+#cadeiras {
+  background-image: url("../imagens/parallax/cadeiras.png");
+}
+
+#barbeiro {
+  background-image: url("../imagens/parallax/barbeiro.png");
+}
+
+#vitima {
+  background-image: url("../imagens/parallax/vitima.png");
+}
+
+#chao {
+  background-image: url("../imagens/parallax/ground.png");
+}
+
 * {
-  @import url("http://fonts.cdnfonts.com/css/georgia");
-  font-family: "Georgia", sans-serif;
+  font-family: 'Georgia', sans-serif;
   color: white;
 }
 
@@ -22,11 +203,13 @@ body {
   top: 0;
   width: 100%;
 }
+
 .header div.scrollmenu {
   background-color: #363636;
   overflow: auto;
   white-space: nowrap;
 }
+
 .header div.scrollmenu a {
   display: inline-block;
   color: white;
@@ -34,40 +217,56 @@ body {
   padding: 14px;
   text-decoration: none;
 }
+
 .header div.scrollmenu a:hover {
   background-color: #777;
 }
+
 .header .navbar {
   padding: 15px;
   background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 30px;
   text-decoration: none;
   color: #fff;
 }
+
 .header .nav-item {
   margin: 0;
   padding: 0;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   max-width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   font-size: 25px;
 }
+
 .header .nav-link {
   display: inline-block;
 }
+
 .header a {
   text-decoration: none;
   color: #fff;
 }
+
 .header .brand {
   float: left;
 }
+
 .header .home {
   position: absolute;
   right: 40px;
 }
+
 .header .dots {
   background: none;
   width: 50px;
@@ -77,12 +276,19 @@ body {
   color: white;
   position: absolute;
   right: 0;
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
+
 @media (max-width: 715px) {
   .header .nav-item {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .header .nav-link {
     margin: 5px 0;
@@ -92,13 +298,16 @@ body {
 .inicio {
   width: 100%;
   height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#727272), to(white));
   background-image: linear-gradient(to bottom, #727272, white);
   color: white;
 }
+
 .inicio .NockasZe {
   width: 100%;
   height: auto;
 }
+
 .inicio .cinema {
   position: absoloute;
   margin: auto;
@@ -106,10 +315,13 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: auto;
 }
+
 .inicio .bg {
   background-image: url("../imagens/SHHHHHH... 20º Texto Background.png");
   /* Full height */
@@ -127,9 +339,15 @@ body {
 
 header, footer {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .barbeiro {
@@ -142,4 +360,5 @@ header, footer {
 .imgBarbeiro {
   position: absolute;
   height: 500px;
-}/*# sourceMappingURL=main.css.map */
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,51 @@
+.button {
+    --background: #2d2e30;
+    --text: #fff;
+    --duration: .5s;
+    --move-hover: -4px;
+    padding: 16px 32px;
+    font-weight: 500;
+    font-family: "Signika Negative", sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    border-radius: 24px;
+    display: block;
+    outline: none;
+    border: none;
+    letter-spacing: .5px;
+    background: var(--background);
+    color: var(--text);
+    transform: translateY(var(--y));
+    transition: transform var(--duration) ease, box-shadow var(--duration) ease;
+    margin-left: 44%;
+
+    div {
+        display: flex;
+        span {
+            display: block;
+            backface-visibility: hidden;
+            font-style: normal;
+            $i: 1;
+            @while $i < 12 {
+                &:nth-child(#{$i}) {
+                    --d: #{$i / 20 + s};
+                }
+                $i: $i + 1;
+            }
+        }
+    }
+    &:hover {
+        --y: var(--move-hover);
+        --move: -4px;
+        span {
+            animation: move var(--duration) linear var(--d);
+        }
+    }
+}
+
+@keyframes move {
+    40% {
+        transform: translateY(var(--move));
+        text-shadow: var(--shadow-active);
+    }
+}
